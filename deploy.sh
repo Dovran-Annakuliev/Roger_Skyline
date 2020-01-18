@@ -5,7 +5,7 @@ apt-get update -y
 apt-get update -y
 
 #install usefull packages
-apt-get install sudo vim portsentry ufw fail2ban apache2 mailutils -y
+apt-get install sudo md5sum postfix mpack vim portsentry ufw fail2ban apache2 mailutils -y
 
 #config sudoers
 
@@ -38,7 +38,7 @@ cp -r /root/deploy/site/* /var/www/html/
 
 #config firewall
 ufw enable
-ufw allow 34048/tcp
+ufw allow 55555/tcp
 ufw allow 80/tcp
 ufw allow 443/tcp
 
@@ -57,6 +57,12 @@ cp /root/deploy/src/update_script.sh /etc/cron.d/
 cp /root/deploy/src/crontab_checker.sh /etc/cron.d/
 rm -rf /etc/crontab
 cp /root/deploy/src/crontab /etc/
+cp /root/deploy/src/crontab_original	/root/
+md5sum /etc/crontab > /root/crontab_control_sum
+
+#config aliases
+rm -rf /etc/aliases
+cp /root/deploy/src/aliases /etc/
 
 #stop unusefull services
 #service console-setup.service stop
