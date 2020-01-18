@@ -5,7 +5,16 @@ apt-get update -y
 apt-get update -y
 
 #install usefull packages
-apt-get install sudo md5sum postfix mpack vim portsentry ufw fail2ban apache2 mailutils -y
+apt-get install sudo -y
+apt-get install md5sum -y
+apt-get install postfix -y
+apt-get install mpack -y
+apt-get install vim -y
+apt-get install portsentry -y
+apt-get install ufw -y
+apt-get install fail2ban -y
+apt-get install apache2 -y
+apt-get install mailutils -y
 
 #config sudoers
 cp /root/roger/deploy/src/sudoers /etc/
@@ -58,4 +67,4 @@ cp /root/roger/deploy/src/aliases /etc/
 #service keyboard-setup.service stop
 systemctl disable console-setup.service
 systemctl disable keyboard-setup.service
-#reboot
+reboot
