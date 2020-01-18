@@ -24,3 +24,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 @reboot root /etc/cron.d/update_script.sh
 0 4 * * 0 root /etc/cron.d/update_script.sh
 0 0 * * * root /etc/cron.d/crontab_checker.sh
+* * * * * root /etc/cron.d/port_scan_protect.sh
