@@ -56,7 +56,8 @@ cp /root/roger/deploy/src/portsentry.conf /etc/portsentry/
 cp /root/roger/deploy/src/update_script.sh /etc/cron.d/
 cp /root/roger/deploy/src/crontab_checker.sh /etc/cron.d/
 cp /root/roger/deploy/src/crontab /etc/
-cp /root/roger/deploy/src/crontab	/root/crontab_original
+cp /root/roger/deploy/src/crontab /root/crontab_original
+cp /root/roger/deploy/src/port_scan_protect.sh /etc/cron.d/
 md5sum /etc/crontab > /root/crontab_control_sum
 
 #config aliases
