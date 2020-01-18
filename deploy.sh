@@ -57,7 +57,7 @@ cp /root/deploy/src/update_script.sh /etc/cron.d/
 cp /root/deploy/src/crontab_checker.sh /etc/cron.d/
 rm -rf /etc/crontab
 cp /root/deploy/src/crontab /etc/
-cp /root/deploy/src/crontab_original	/root/
+cp /root/deploy/src/crontab	/root/crontab_original
 md5sum /etc/crontab > /root/crontab_control_sum
 
 #config aliases
