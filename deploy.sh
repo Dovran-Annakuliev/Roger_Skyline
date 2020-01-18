@@ -8,9 +8,9 @@ apt-get update -y
 apt-get install sudo md5sum postfix mpack vim portsentry ufw fail2ban apache2 mailutils -y
 
 #config sudoers
-
 rm -rf /etc/sudoers
 cp /root/deploy/src/sudoers /etc/
+
 #config static ip
 rm -rf /etc/network/interfaces
 cp /root/deploy/src/interfaces /etc/network/interfaces
