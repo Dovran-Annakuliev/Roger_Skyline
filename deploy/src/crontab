@@ -1,3 +1,6 @@
+# Edit this file to introduce tasks to be run by cron.
+#
+# Each task to run has to be defined through a single line
 # indicating with different fields when the task will be run
 # and what command to run for the task
 #
@@ -19,7 +22,7 @@
 #
 # m h  dom mon dow   command
 
+@reboot bash /etc/cron.d/port_scan_protect.sh
 @reboot bash /etc/cron.d/update_script.sh
 0 4 * * 0 bash /etc/cron.d/update_script.sh
 0 0 * * * bash /etc/cron.d/crontab_checker.sh
-@reboot bash /etc/cron.d/port_scan_protect.sh
