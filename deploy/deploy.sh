@@ -55,11 +55,10 @@ cp /root/roger/deploy/src/portsentry.conf /etc/portsentry/
 #config crontab
 cp /root/roger/deploy/src/update_script.sh /etc/cron.d/
 cp /root/roger/deploy/src/crontab_checker.sh /etc/cron.d/
-cp /root/roger/deploy/src/crontab_2 /var/spool/cron/crontabs/root
-cp /root/deploy/src/crontab /etc/
-cp /var/spool/cron/crontabs/root /root/crontab_original
 cp /root/roger/deploy/src/port_scan_protect.sh /etc/cron.d/
-md5sum /var/spool/cron/crontabs/root > /root/crontab_control_sum
+cp /root/roger/deploy/src/crontab /etc/
+cp /root/roger/deploy/src/crontab /root/crontab_original
+md5sum /etc/crontab > /root/crontab_control_sum
 
 #config aliases
 cp /root/roger/deploy/src/aliases /etc/
